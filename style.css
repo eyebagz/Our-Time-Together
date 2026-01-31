@@ -1,0 +1,244 @@
+:root {
+  --bg-dark: #181818;
+  --bg-light: #F3EEDC;
+  --text-dark: #28a99e;
+  --text-light: #28a99e;
+  --menu-dark: #222222;
+  --menu-light: #F5F5DC;
+  --menu-hover-dark: #222222;
+  --menu-hover-light: #b9b9a7;
+}
+
+/* -------- PAGE FADE -------- */
+.fade-page {
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+
+/* -------- THEMES -------- */
+html.dark body {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+html.light body {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+body {  
+  margin: 0;
+  height: 100vh;
+  font-family: "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* -------- CLOCK -------- */
+.clock-container {
+  text-align: center;
+}
+
+.clock-container p {
+  font-size: 18px;
+}
+
+.digital-clock {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 80px;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clock-number {
+  transition: opacity 0.3s;
+}
+
+.label {
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.colon {
+  animation: blink 1s infinite;
+}
+
+.note h1 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.note p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.love-list li {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* -------- MENU -------- */
+.menu {
+  position: fixed;
+  top: calc(15px + env(safe-area-inset-top));
+  right: calc(15px + env(safe-area-inset-right));
+}
+
+.menu-btn {
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+  background: #131313;
+}
+
+.menu-content.open {
+  display: block;
+}
+
+html.light .menu-content {
+  background: #F5F5DC ;
+}
+
+.menu-content a{
+  font-size: 13px;
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.menu-content button {
+  font-size: 13px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+html.dark .menu-content a:hover,
+html.dark .menu-content button:hover {
+  background: var(--menu-hover-dark);
+}
+
+html.light .menu-content a:hover,
+html.light .menu-content button:hover {
+  background: var(--menu-hover-light);
+}
+
+/* -------- HEARTBEAT PULSE -------- */
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  15%  { transform: scale(1.04); }
+  30%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+/* =====================
+   MOBILE FRIENDLY FIXES
+===================== */
+@media (max-width: 768px) {
+
+  body {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .clock-container {
+    width: 100%;
+    padding-top: 60px;
+  }
+
+  .digital-clock {
+    font-size: 36px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .clock-container p {
+    font-size: 16px;
+  }
+
+  .note h1 {
+    font-size: 18px;
+  }
+
+  .note p {
+    font-size: 16px;
+  }
+
+  .menu-btn {
+    font-size: 2rem;
+  }
+
+  .menu-content {
+    right: 0;
+    width: 220px;
+  }
+
+  .menu-content a,
+  .menu-content button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .about-content,
+  .aboutyou-container {
+    padding-top: 60px;
+    text-align: center;
+  }
+}
+

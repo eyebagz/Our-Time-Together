@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Time</title>
+  <script>
+    (function () {
+      const theme = localStorage.getItem("theme") || "dark";
+      document.documentElement.className = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="fade-page">
+
+  <div class="menu">
+    <button class="menu-btn">☰</button>
+    <div class="menu-content">
+      <a href="index.html" data-link>Timer</a>
+      <a href="message.html" data-link>Message</a>
+      <a href="about.html" data-link>About Us</a>
+      <hr />
+      <button id="themeToggle">Toggle Dark / Light</button>
+    </div>
+  </div>
+
+  <div class="aboutyou-container">
+    <h1>The things I list here are just some of the many things I love about you.</h1>
+      <div class="love-list">
+        <li>Your smile</li>
+        <li>Your eyes</li>
+        <li>Your sense of humor</li>
+        <li>Your cheeky little grin</li>
+        <li>Your ability to always make me laugh</li>
+        <li>Your way of always being right</li>
+        <li>Your empathy</li>
+        <li>Your honesty</li>
+        <li>Your patience even though its very small</li>
+        <li>Your hugs</li>
+        <li>Your kisses</li>
+        <li>Your voice</li>
+        <li>Your style</li>
+        <li>Your laugh</li>
+        <li>Your kindness</li>
+        <li>Your intelligence</li>
+        <li>Your creativity</li>
+        <li>Your passion</li>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

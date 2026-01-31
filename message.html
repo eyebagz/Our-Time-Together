@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Time</title>
+  <script>
+    (function () {
+      const theme = localStorage.getItem("theme") || "dark";
+      document.documentElement.className = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="fade-page">
+
+  <div class="menu">
+    <button class="menu-btn">☰</button>
+    <div class="menu-content">
+      <a href="index.html" data-link>Timer</a>
+      <a href="about.html" data-link>About Us</a>
+      <a href="aboutyou.html" data-link>Things I Love About You</a>
+      <hr />
+      <button id="themeToggle">Toggle Dark / Light</button>
+    </div>
+  </div>
+
+  <div class="clock-container">
+    <h1>Message</h1>
+    <p>Something nice will be here.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

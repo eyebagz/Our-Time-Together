@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Time</title>
+  <script>
+    (function () {
+      const theme = localStorage.getItem("theme") || "dark";
+      document.documentElement.className = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="fade-page">
+
+  <div class="menu">
+    <button class="menu-btn">☰</button>
+    <div class="menu-content">
+      <a href="about.html" data-link="">About Us</a>
+      <a href="message.html" data-link>Message</a>
+      <a href="aboutyou.html" data-link>Things I Love About You</a>
+      <hr />
+      <button id="themeToggle">Toggle Dark / Light</button>
+    </div>
+  </div>
+
+  <div class="clock-container">
+    <h1>Time Since Our First Conversation</h1>
+    <p>This clock shows the time since our first ever time we talked.</p>
+    <p>"Have you ever meltmaxxed?"</p>
+    <div class="digital-clock">
+      <span id="days" class="clock-number">000</span>
+      <span class="label">DAYS</span>
+      <span class="colon">:</span>
+      <span id="hours" class="clock-number">00</span>
+      <span class="label">HOURS</span>
+      <span class="colon">:</span>
+      <span id="minutes" class="clock-number">00</span>
+      <span class="label">MINUTES</span>
+      <span class="colon">:</span>
+      <span id="seconds" class="clock-number">00</span>
+      <span class="label">SECONDS</span>
+    </div>
+    <div class="note">
+      <h1>Since August 13, 2025</h1>
+      <p>I tried making the timer as accurate as possible, though it may be completely wrong.</p>
+      <p>I wanted to make this for you to show you how much I love you and always will</p>
+      <p>-- Emily</p>
+    </div>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
