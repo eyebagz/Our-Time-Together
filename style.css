@@ -4,9 +4,9 @@
   --text-dark: #28a99e;
   --text-light: #28a99e;
   --menu-dark: #222222;
-  --menu-light: #F5F5DC;
+  --menu-light: #BFB394;
   --menu-hover-dark: #222222;
-  --menu-hover-light: #b9b9a7;
+  --menu-hover-light: #D6CDB3;
 }
 
 /* -------- PAGE FADE -------- */
@@ -94,12 +94,16 @@ body {
 }
 
 .love-list li {
-  margin-left: 30%;
-  margin-right: 30%;
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
 }
+
+.aboutyou-container p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
 @keyframes blink {
   50% { opacity: 0; }
 }
@@ -113,11 +117,23 @@ body {
 
 .menu-btn {
   font-size: 2.5rem;
-  background: none;
-  border: none;
+  background: #131313;
+  border-radius: 6px;
+  border: 2px solid #28a99e;
   color: inherit;
   cursor: pointer;
 }
+
+html.light .menu-btn {
+  font-size: 2.5rem;
+  background: #F3EEDC;
+  border-radius: 6px;
+  border: 2px solid #28a99e;
+  opacity: 0.75;
+  color: inherit;
+  cursor: pointer;
+}
+
 
 .menu-content {
   display: none;
@@ -128,6 +144,7 @@ body {
   padding-right: 20px;
   border-radius: 8px;
   background: #131313;
+  border: 2px solid #28a99e;
 }
 
 .menu-content.open {
@@ -135,7 +152,8 @@ body {
 }
 
 html.light .menu-content {
-  background: #F5F5DC ;
+  background: #F3EEDC ;
+  border: 2px solid #28a99e;
 }
 
 .menu-content a{
